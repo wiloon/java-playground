@@ -5,6 +5,8 @@ package com.wiloon.java21;
 
 import java.util.Random;
 import java.util.Scanner;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class App {
     public String getGreeting() {
@@ -30,6 +32,15 @@ public class App {
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        int threadCount = 3;
+        ExecutorService es = Executors.newFixedThreadPool(threadCount);
+        for (int i = 0; i < threadCount; i++) {
+            es.execute(new Runnable() {
+                @Override
+                public void run() {
+                    System.out.println(new App().getGreeting());
+                }
+            });
+        }
     }
 }
