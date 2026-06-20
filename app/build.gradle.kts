@@ -31,14 +31,16 @@ testing {
     }
 }
 
-// Apply a specific Java toolchain to ease working on different environments.
 java {
-    toolchain {
-        languageVersion.set(JavaLanguageVersion.of(21))
-    }
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
 }
 
 application {
-    // Define the main class for the application.
-    mainClass.set("com.wiloon.java21.App")
+    // Default main; override: ./gradlew run -PmainClass=com.wiloon.playground.RunnableDemo
+    mainClass.set(
+        providers.gradleProperty("mainClass")
+            .orElse("com.wiloon.playground.SamDemo")
+            .get()
+    )
 }
