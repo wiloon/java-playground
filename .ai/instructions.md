@@ -18,7 +18,7 @@ Do **not** add Chinese (or any non-English prose) to files in this project. If t
 java-playground/
 ├── app/src/main/java/com/wiloon/playground/   # demo applications
 ├── app/src/test/java/com/wiloon/playground/   # JUnit tests
-├── app/build.gradle.kts                   # application plugin, Java 21 toolchain
+├── app/build.gradle.kts                   # application plugin, Java 26 toolchain
 └── settings.gradle.kts
 ```
 

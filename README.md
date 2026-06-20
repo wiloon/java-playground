@@ -11,11 +11,22 @@ Runnable Java language-feature demos for learning. Tracks the **latest JDK** (se
 
 Default `./gradlew run` executes `SamDemo`.
 
-Requires **JDK 21+** on `JAVA_HOME` (Gradle uses the running JVM; JDK 8/17 cannot compile this project).
+Requires **JDK 26** on `JAVA_HOME` (Gradle uses the running JVM; older JDKs cannot compile this project).
+
+## Run all tests
+
+Use Gradle (via the wrapper):
 
 ```bash
-./gradlew test          # all demo tests (SamDemo, RunnableDemo, App)
-./gradlew build         # compile + test
+./gradlew test
+```
+
+This runs every JUnit test under `app/src/test/java/` (currently `SamDemoTest`, `RunnableDemoTest`, and `AppTest`).
+
+To compile and test in one step:
+
+```bash
+./gradlew build
 ```
 
 ## AI agents
