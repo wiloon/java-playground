@@ -8,6 +8,7 @@ Runnable Java language-feature demos for learning. Tracks the **latest JDK** (se
 | ----- | ----- | --- |
 | [`SamDemo`](app/src/main/java/com/wiloon/playground/SamDemo.java) | Custom SAM; anonymous class → lambda → method reference; `Predicate`, `Comparator` | `./gradlew run` |
 | [`RunnableDemo`](app/src/main/java/com/wiloon/playground/RunnableDemo.java) | JDK `Runnable` SAM; anonymous class & lambda; `Thread` and virtual-thread executor | `./gradlew run -PmainClass=com.wiloon.playground.RunnableDemo` |
+| [`AnnotationDemo`](app/src/main/java/com/wiloon/playground/AnnotationDemo.java) | Custom `@interface`, meta-annotations, `@Deprecated`, `@Override`, runtime reflection | `./gradlew run -PmainClass=com.wiloon.playground.AnnotationDemo` |
 
 Default `./gradlew run` executes `SamDemo`.
 
@@ -21,7 +22,7 @@ Use Gradle (via the wrapper):
 ./gradlew test
 ```
 
-This runs every JUnit test under `app/src/test/java/` (currently `SamDemoTest`, `RunnableDemoTest`, and `AppTest`).
+This runs every JUnit test under `app/src/test/java/` (currently `SamDemoTest`, `RunnableDemoTest`, `AnnotationDemoTest`, and `AppTest`).
 
 To compile and test in one step:
 
